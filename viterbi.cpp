@@ -110,17 +110,23 @@ void viterbi_solver(FILE *output_file)
     {
         max_idx = -1;
         max_val = -1.0;
+#ifdef DEBUG
         cout << "max(";
+#endif
         for(int i =idx*3; i < idx*3+3;i++)
         {
+#ifdef DEBUG
             cout << calculated_probs_all[j-1][i] << ",";
+#endif
             if(calculated_probs_all[j-1][i] >= max_val)
             {
                 max_val = calculated_probs_all[j-1][i];
                 max_idx = i-idx*3;
             }
         }
+#ifdef DEBUG
         cout << ")" << endl;
+#endif
         result_weather_num.insert(result_weather_num.begin(),max_idx);
         idx = max_idx;
     }

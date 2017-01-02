@@ -1,5 +1,5 @@
 CC := g++
-#CFLAGS := -g3 -O0 -std=c++1z -Wall -c 
+#CFLAGS := -g3 -O0 -std=c++1z -Wall -c -DDEBUG 
 CFLAGS := -O3 -std=c++1z -Wall -c
 LFLAGS := -o
 
